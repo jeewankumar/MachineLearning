@@ -1,0 +1,15 @@
+# Setting up the library folder
+from importlib import reload
+import sys
+sys.path.insert(0,'/home/jkumar16/MyModules')
+
+## importing the libraries
+import DataPreparation as dp
+import ExploratoryDataAnalysis as eda
+import FeatureEngineering as fe
+import ModelBuilding as mb
+import ModelImplementation as mi
+import ModelValidation as mv
+
+## in order to reload the package after update
+reload(module_name)
