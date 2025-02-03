@@ -1,0 +1,17 @@
+Updates on TransUnion Data Processing & Model Training
+1. PySpark Setup for Large-Scale Data Processing
+Challenge: Training a model using all 1500+ variables from the TransUnion dataset in Python was not feasible due to memory limitations. A thorough data mining process is required to identify key variables.
+Solution: Setting up PySpark for distributed data processing.
+Progress:
+JDK installation was a hurdle—IT support for JDK 17 is still pending.
+As a workaround, found and used a zip version of JDK 23, which is working fine.
+PySpark setup is now complete, and the server is Spark-ready for processing TransUnion data.
+Next Bottleneck:
+CPU Constraints: The AWS server currently has only 8 cores (2.3 GHz), whereas 16-32 cores are recommended for Spark jobs and MLlib-based data mining tasks.
+Disk Performance: The current disk might be an HDD, which could slow down training. SSD storage is preferred for faster read/write speeds.
+2. Data Mining in Python (Interim Approach)
+Since PySpark setup was still in progress, I started data mining using Python by processing 250 variables at a time.
+Approach:
+Trained a Random Forest model to analyze feature importance.
+Used Permutation Feature Importance to identify key variables.
+Results: Will present the key findings in the meeting.
